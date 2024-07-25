@@ -17,8 +17,12 @@
 	?>
 	
 	<body <?php body_class( $awesome_classes ); ?>>
-		
+
+	    <div class="container">
+			<div class="row">
+		     <div class="col-xs-12">
 		<?php wp_nav_menu(array('theme_location'=>'primary'));
 		//    var_dump(mixed $expression) to see what is inside the array
-		?>
+		?></div>
+		</div>
 		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
