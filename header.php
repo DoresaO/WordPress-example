@@ -20,9 +20,26 @@
 
 	    <div class="container">
 			<div class="row">
-		     <div class="col-xs-12">
-		<?php wp_nav_menu(array('theme_location'=>'primary'));
-		//    var_dump(mixed $expression) to see what is inside the array
-		?></div>
-		</div>
+		 <div class="col-xs-12">
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="container-fluid">
+         <a class="navbar-brand" href="#"> Awesome Theme </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+           <?php  
+             wp_nav_menu(array(
+               'theme_location' => 'primary',
+               'container' => false,
+               'menu_class' => 'navbar-nav ms-auto'
+             )); 
+           ?>
+         </div>
+       </div>
+     </nav>
+
+				</div>
+				
+			</div>
 		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
